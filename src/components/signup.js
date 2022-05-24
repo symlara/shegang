@@ -29,6 +29,11 @@ const Signup = () => {
     history.push('/');
   };
 
+  const successSignup = () => {
+    const confirm = window.confirm('Successfully signed up!')
+
+  }
+
   return (
     <div className="form">
       <form onSubmit={onSubmit}>
@@ -48,7 +53,7 @@ const Signup = () => {
       </div>
 
       <div className="btn_container">
-        <button className="btn" type="submit">Register</button>
+        <button onClick={successSignup} className="btn" type="submit">Register</button>
       </div>
       </form>
     </div>

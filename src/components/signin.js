@@ -75,6 +75,9 @@ const history = useHistory();
       const confirm = window.confirm('An email has been sent for you to reset your password')
   };
 
+  const successLogin = () => {
+    const confirm = window.confirm('Successfully logged in!')
+  }
 
 
   
@@ -92,7 +95,7 @@ const history = useHistory();
         <input placeholder="Password" type="password" ref={psdRef} />
         </div>
         <div className="btn_container">
-         <button className="btn" type="submit">Sign In</button>
+         <button onClick={successLogin} className="btn" type="submit">Sign In</button>
         </div>
         <p onClick={forgotPasswordHandler}>Forgot Password?</p>
       </form>
