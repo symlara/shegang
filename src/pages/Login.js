@@ -12,7 +12,7 @@ const Auth = () => {
           <div className="container text-white text-center cursor-pointer">
               {!index ? <Signin /> : <Signup />}
               <p onClick={toggleIndex}>
-              {!index ? "New user? Click here " : "Already have an acount?"}
+              {!index ? "New user? Click here " : "Already have an account?"}
               </p>
           </div>
       );
