@@ -1,25 +1,49 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SheGang",
+  "name": "SheGang Fansite",
+  "description": "centralized app for h.e.r fans to network and connect",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+      {
+          "src": "icons/icon-36x36.png",
+          "type": "image/png",
+          "sizes": "36x36"
+        },
+        {
+          "src": "icons/icon-48x48.png",
+          "type": "image/png",
+          "sizes": "48x48"
+        },
+        {
+          "src": "icons/icon-72x72.png",
+          "type": "image/png",
+          "sizes": "72x72"
+        },
+        {
+          "src": "icons/icon-144x144.png",
+          "type": "image/png",
+          "sizes": "144x144"
+        },
+        {
+          "src": "icons/icon-192x192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        },
+        {
+          "src": "icons/maskable.png",
+          "type": "image/png",
+          "sizes": "192x192",
+          "purpose": "maskable"
+        }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "shortcuts": [],
+  "scope" : "/",
+  "start_url" : "/",
+  "background_color" : "#ffffff",
+  "display" : "standalone",
+  "theme_color" : "#000000"
 }
