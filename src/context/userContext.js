@@ -58,6 +58,7 @@ export const UserContextProvider = ({ children }) => {
       .finally(() => setLoading(false));
   };
 
+
   const logoutUser =  async () => {
     await updateDoc(doc(db, 'users', auth.currentUser.uid), {
       isOnline: false,

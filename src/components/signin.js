@@ -16,8 +16,7 @@ const Signin = () => {
     loading: false,
 });
 
-
-
+const { error } = useUserContext();
 
   const emailRef = useRef();
   const psdRef = useRef();
@@ -27,11 +26,12 @@ const history = useHistory();
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setData({ ...data, error: null, loading: true });
     const email = emailRef.current.value;
     const password = psdRef.current.value;
     if (email && password) signInUser(email, password);
 
-    if ( !email || !password) {
+    if ( !emailRef || !psdRef) {
       setData({ ...data, error: "All fields are required" });
     }
 
@@ -50,6 +50,7 @@ const history = useHistory();
           error: null, 
           loading: false
       });
+    
       history.replace('/');
   } catch(err) {
       setData({ ...data, error: err.message, loading: false });
@@ -71,8 +72,8 @@ const history = useHistory();
       forgotPassword(email).then(() => {
         emailRef.current.value = "";
       });
+      const confirm = window.confirm('An email has been sent for you to reset your password')
   };
-
 
 
 
@@ -80,6 +81,7 @@ const history = useHistory();
   return (
     <div className="form">
       <h2> Login </h2>
+      <p>All fields are required*</p>
       <form onSubmit={onSubmit}>
 
         <div className="input-container">
@@ -89,9 +91,8 @@ const history = useHistory();
         <div className="input-container">
         <input placeholder="Password" type="password" ref={psdRef} />
         </div>
-
         <div className="btn_container">
-        <button className="btn" type="submit">Sign In</button>
+         <button className="btn" type="submit">Sign In</button>
         </div>
         <p onClick={forgotPasswordHandler}>Forgot Password?</p>
       </form>

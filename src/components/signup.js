@@ -33,6 +33,7 @@ const Signup = () => {
     <div className="form">
       <form onSubmit={onSubmit}>
       <h2 className='text-white text-center'> New User</h2>
+      <p>All fields are required*</p>
 
       <div className="input-container">
         <input placeholder="Email" type="email" ref={emailRef}   />
